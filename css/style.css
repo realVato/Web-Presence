@@ -18,6 +18,12 @@ span.recommended {
     font-size: 10px;
 }
 
+li, .top-box, .showcase, .services div, .info {
+    -webkit-box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
+}
+
 #navbar ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -46,7 +52,7 @@ span.recommended {
     color: #fff;
 }
 
-/* Top-container */
+/* Home-showcase */
 .top-container {
     display: grid;
     margin: 20px 0;
@@ -102,12 +108,12 @@ span.recommended {
     grid-area: top-box-b;
 }
 
-/* Mid-Container */
+/* Home-Services */
 
 .services {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -115,4 +121,22 @@ span.recommended {
 .services div {
     background-color: #ccc;
     padding: 10px 0;
+}
+
+/* Home-Info */
+.lower-container {
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.info .scope img {
+    width: 95%;
+    margin: 10px 0 10px 10px;
 }
