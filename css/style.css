@@ -1,13 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+:root {
+    --main-container-color: #333; 
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     margin: 20px 30px;
+    color: #fff;
 }
 
 a {
     text-decoration: none;
+    color: #fff;
+}
+
+.showcase a, .top-box a, .info div a{
+    background-color: #111;
+    padding: 10px;
+    width: 10%;
+    text-align: center;
+    transition: 1s;
+    border-radius: 3px;  
+}
+
+.showcase a:hover, .top-box a:hover, .info div a:hover{
+    background-color: rgb(155, 28, 28);
 }
 
 span {
@@ -18,7 +37,7 @@ span.recommended {
     font-size: 10px;
 }
 
-li, .top-box, .showcase, .services div, .info {
+li, .top-box, .showcase, .services div, .info, .portofolio div img {
     -webkit-box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
     box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
@@ -35,21 +54,13 @@ li, .top-box, .showcase, .services div, .info {
 }
 
 #navbar ul li {
-    background-color: #ccc;
+    background-color: var(--main-container-color);;
     padding: 10px 0;
     transition: 1s;
 }
 
 #navbar ul li:hover {
     background-color: #555;
-}
-
-#navbar ul li a {
-    color: #000;
-}
-
-#navbar ul li a:hover {
-    color: #fff;
 }
 
 /* Home-showcase */
@@ -67,7 +78,6 @@ li, .top-box, .showcase, .services div, .info {
     flex-direction: column;
     justify-content: center;
     padding: 30px;
-    color: #fff;
     grid-area: showcase;
     background: url('../img/blogging-coding-copywriting-34140.jpg') no-repeat center center/cover;
     height: 600px;
@@ -78,33 +88,18 @@ li, .top-box, .showcase, .services div, .info {
     margin: 0;
 }
 
-.showcase a {
-    background-color: #111;
-    color: #fff;
-    padding: 10px;
-    width: 10%;
-    text-align: center;
-    transition: 1s;
-    border-radius: 3px;
-}
-
-.showcase a:hover {
-    background-color: rgb(155, 28, 28);
-}
-
 .top-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #ccc;
+    background-color: var(--main-container-color);;
     padding: 0 15px;
 }
 
 .top-box a {
     background-color: #111;
-    color: #fff;
     padding: 10px;
     width: 80%;
     transition: 1s;
@@ -134,13 +129,13 @@ li, .top-box, .showcase, .services div, .info {
 }
 
 .services div {
-    background-color: #ccc;
+    background-color: var(--main-container-color);;
     padding: 10px 0;
 }
 
 /* Home-Info */
 .lower-container {
-    background-color: #ccc;
+    background-color: var(--main-container-color);;
     margin-bottom: 20px;
 }
 
@@ -154,4 +149,23 @@ li, .top-box, .showcase, .services div, .info {
 .info .scope img {
     width: 95%;
     margin: 10px 0 10px 10px;
+}
+
+/* Home-Portofolio */
+.portofolio {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-bottom: 20px;
+}
+
+.portofolio div img {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: var(--main-container-color);
+    text-align: center;
+    padding: 10px 0;
 }
