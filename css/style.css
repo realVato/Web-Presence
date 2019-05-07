@@ -102,3 +102,17 @@ span.recommended {
     grid-area: top-box-b;
 }
 
+/* Mid-Container */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services div {
+    background-color: #ccc;
+    padding: 10px 0;
+}
