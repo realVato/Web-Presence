@@ -2,7 +2,20 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 17px;
     margin: 20px 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color: green;
+}
+
+span.recommended {
+    font-size: 10px;
 }
 
 #navbar ul {
@@ -26,10 +39,66 @@ body {
 }
 
 #navbar ul li a {
-    text-decoration: none;
     color: #000;
 }
 
 #navbar ul li a:hover {
     color: #fff;
 }
+
+/* Top-container */
+.top-container {
+    display: grid;
+    margin: 20px 0;
+    grid-gap: 20px;
+    grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: #fff;
+    grid-area: showcase;
+    background: url('../img/blogging-coding-copywriting-34140.jpg') no-repeat center center/cover;
+    height: 600px;
+}
+
+.showcase h1 {
+    margin: 0;
+}
+
+.top-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ccc;
+    padding: 0 15px;
+}
+
+.top-box a {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    width: 80%;
+    transition: 1s;
+    border-radius: 3px;
+}
+
+.top-box a:hover {
+    background-color: rgb(155, 28, 28);
+}
+
+.top-box-a {
+    grid-area: top-box-a;
+}
+
+.top-box-b {
+    grid-area: top-box-b;
+}
+
