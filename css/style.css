@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic');
 
 :root {
     --main-container-color: #333; 
@@ -11,9 +12,7 @@ body {
     color: #fff;
 }
 
-
 /* GLOBAL */
-
 a {
     text-decoration: none;
     color: #fff;
@@ -32,8 +31,16 @@ a {
     background-color: rgb(155, 28, 28);
 }
 
-.top-box:hover, .services div:hover, .info:hover {
+.top-box:hover, .services div:hover, .info:hover, #our-team .staff div:hover {
     background-color: #555;
+}
+
+.top-box, .services div, .info, #our-team .staff div {
+    transition: 1s;
+}
+
+img {
+    width: 100%;
 }
 
 span {
@@ -105,7 +112,6 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     text-align: center;
     background-color: var(--main-container-color);;
     padding: 0 15px 10px 15px;
-    transition: 1s;
 }
 
 .top-box a {
@@ -141,7 +147,6 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
 .services div {
     background-color: var(--main-container-color);;
     padding: 10px 10px;
-    transition: 1s;
 }
 
 /* Home-Info */
@@ -155,11 +160,9 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 20px;
-    transition: 1.2s;
 }
 
 .info .scope img {
-    width: 95%;
     margin: 10px 0 10px 10px;
 }
 
@@ -171,8 +174,82 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     margin-bottom: 20px;
 }
 
-.portofolio div img {
-    width: 100%;
+/* About page */
+#our-team .row {
+    text-align: center;
+    padding: 30px 0;
+}
+
+#our-team .row h1 {
+    font-size: 2rem;
+    color: #000;
+}
+
+#our-team hr {
+    width: 15%;
+}
+
+#our-team .staff {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+}
+
+#our-team .staff div {
+    background-color: var(--main-container-color);
+    margin-bottom: 20px;
+}
+
+#our-team .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--main-container-color);
+    margin-bottom: 20px;
+    padding: 60px;
+}
+
+#our-team .stats .stats-col {
+    display: flex;
+}
+
+#our-team .stats .stats-col i {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#our-team .stats .stats-col p {
+    margin: 5px;
+}
+
+#our-team .manager {
+    display: grid;
+    width: 80%;
+    margin: 30px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#our-team .manager div:nth-child(2) {
+    display: flex;
+    margin: 0 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #333; 
+}
+
+#our-team .manager div:nth-child(2) blockquote {
+    background-color: rgb(252, 245, 245);
+    padding: 20px;
+    font-size: 1.4em;
+    margin: 50px auto;
+    font-family: Open-Sans;
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid var(--main-container-color) ;
+    line-height: 1.6;
 }
 
 /* Footer */
