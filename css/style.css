@@ -11,6 +11,9 @@ body {
     color: #fff;
 }
 
+
+/* GLOBAL */
+
 a {
     text-decoration: none;
     color: #fff;
@@ -29,6 +32,10 @@ a {
     background-color: rgb(155, 28, 28);
 }
 
+.top-box:hover, .services div:hover, .info:hover {
+    background-color: #555;
+}
+
 span {
     color: green;
 }
@@ -42,6 +49,8 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     -moz-box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
     box-shadow: -1px 1px 17px -6px rgba(0,0,0,0.75);
 }
+
+/* </GLOBAL> */
 
 #navbar ul {
     display: grid;
@@ -95,7 +104,8 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     align-items: center;
     text-align: center;
     background-color: var(--main-container-color);;
-    padding: 0 15px;
+    padding: 0 15px 10px 15px;
+    transition: 1s;
 }
 
 .top-box a {
@@ -130,7 +140,8 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
 
 .services div {
     background-color: var(--main-container-color);;
-    padding: 10px 0;
+    padding: 10px 10px;
+    transition: 1s;
 }
 
 /* Home-Info */
@@ -144,6 +155,7 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 20px;
+    transition: 1.2s;
 }
 
 .info .scope img {
@@ -168,4 +180,27 @@ footer {
     background-color: var(--main-container-color);
     text-align: center;
     padding: 10px 0;
+}
+
+/* Media Query */
+@media (max-width: 700px) {
+    #navbar ul, .services, .info {
+        grid-template-columns: 1fr;
+    }
+
+    .top-container {
+        grid-template-areas:
+        'showcase showcase'
+        'top-box-a top-box-b' 
+    }
+
+    .showcase a {
+        width: 50%;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        width: 320px;
+    }
 }
