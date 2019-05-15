@@ -18,6 +18,10 @@ a {
     color: #fff;
 }
 
+i {
+    padding: 10px;
+}
+
 .showcase a, .top-box a, .info div a{
     background-color: #111;
     padding: 10px;
@@ -31,11 +35,11 @@ a {
     background-color: rgb(155, 28, 28);
 }
 
-.top-box:hover, .services div:hover, .info:hover, #our-team .staff div:hover {
+.top-box:hover, .services div:hover, .info:hover, #our-team .staff div:hover, #services-link .row1 .div1:hover, #services-link .row2 .div2:hover {
     background-color: #555;
 }
 
-.top-box, .services div, .info, #our-team .staff div {
+.top-box, .services div, .info, #our-team .staff div, #services-link .row1 .div1, #services-link .row2 .div2 {
     transition: 1s;
 }
 
@@ -43,12 +47,9 @@ img {
     width: 100%;
 }
 
-span {
-    color: green;
-}
-
 span.recommended {
     font-size: 10px;
+    color: green;
 }
 
 li, .top-box, .showcase, .services div, .info, .portofolio div img {
@@ -251,6 +252,29 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     color: #555;
     border-left: 4px solid var(--main-container-color) ;
     line-height: 1.6;
+}
+
+/* Services-page */
+#services-link {
+    margin: 20px 0;
+}
+
+#services-link .row1, .row2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 10px;
+}
+
+#services-link .row1 .div1, .row2 .div2 {
+    display: flex;
+    background-color: var(--main-container-color);
+    padding: 20px;
+    align-items: center;
+}
+
+#services-link .row1 .div1:nth-child(1), .row2 .div2:nth-child(1) {
+    text-align: right;
 }
 
 /* Footer */
