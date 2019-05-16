@@ -22,7 +22,10 @@ i {
     padding: 10px;
 }
 
-.showcase h1, #our-team .row h1, #services-showcase .container div:nth-child(1) h1, #contact .text h1 {
+.showcase h1,
+#our-team .row h1,
+#services-showcase .container div:nth-child(1) h1,
+#contact .text h1 {
     font-size: 5rem;
     margin: 0;
 }
@@ -40,11 +43,20 @@ i {
     background-color: rgb(155, 28, 28);
 }
 
-.top-box:hover, .services div:hover, .info:hover, #our-team .staff div:hover, #services-link .row1 .div1:hover, #services-link .row2 .div2:hover {
+.top-box:hover,
+ .services div:hover,
+.info:hover, #our-team .staff div:hover,
+#services-link .row1 .div1:hover,
+#services-link .row2 .div2:hover,
+.contact-divs .row div:hover {
     background-color: #555;
 }
 
-.top-box, .services div, .info, #our-team .staff div, #services-link .row1 .div1, #services-link .row2 .div2 {
+.top-box,
+.services div,
+.info, #our-team .staff div,
+#services-link .row1 .div1,
+#services-link .row2 .div2 {
     transition: 1s;
 }
 
@@ -338,6 +350,30 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     color: var(--main-container-color);
 }
 
+.contact-divs .row {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-divs .row div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--main-container-color);
+    height: 300px;
+}
+
+.contact-divs .row div .contact-us-btn {
+    background-color: rgb(155, 28, 28);
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+}
+
 /* Footer */
 footer {
     background-color: var(--main-container-color);
@@ -348,7 +384,13 @@ footer {
 /* Media Query */
 @media (max-width: 700px) {
     /* HOME */
-    #navbar ul, .services, .info {
+    #navbar ul,
+    .services,
+    .info,
+    #our-team .staff,
+    #our-team .manager,
+    #services-link .row1, .row2,
+    .contact-divs .row {
         grid-template-columns: 1fr;
     }
 
@@ -362,24 +404,15 @@ footer {
         width: 50%;
     }
     /* ABOUT */
-    #our-team .staff {
-        grid-template-columns: 1fr;
-    }
-
     #our-team .stats {
         grid-template-columns: repeat(2, 2fr);
     }
 
     #our-team .manager {
-        grid-template-columns: 1fr;
         width: 100%;
     }
 
     /* SERVICES */
-    #services-link .row1, .row2 {
-        grid-template-columns: 1fr;
-    }
-
     #services-showcase .container div:nth-child(2) .hide-on-small {
         display: none;
     }
