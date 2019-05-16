@@ -307,6 +307,9 @@ li, .top-box, .showcase, .services div, .info, .portofolio div img {
     text-align: right;
 }
 
+/* Contact page */
+
+
 /* Footer */
 footer {
     background-color: var(--main-container-color);
@@ -342,6 +345,15 @@ footer {
     #our-team .manager {
         grid-template-columns: 1fr;
         width: 100%;
+    }
+
+    /* SERVICES */
+    #services-link .row1, .row2 {
+        grid-template-columns: 1fr;
+    }
+
+    #services-showcase .container div:nth-child(2) .hide-on-small {
+        display: none;
     }
 }
 
